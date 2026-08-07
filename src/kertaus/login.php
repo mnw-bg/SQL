@@ -7,7 +7,7 @@ $username = "";
 $opiskelijaryhma = "";
 $password = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = trim($_POST["username"] ?? '');
     $opiskelijaryhma = trim($_POST["opiskelijaryhma"] ?? '');
     $password = $_POST["password"];
