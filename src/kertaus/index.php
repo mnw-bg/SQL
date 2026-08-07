@@ -11,7 +11,7 @@
         <h2>Tervetuloa palautesovellukseen</h2>
         <p>hyvä sovellus</p>
         <input type="button" value="Kirjaudu sisään" onclick="window.location.href='login.php'">
-        
+        <input type="button" value="Kirjaudu ulos" onclick="window.location.href='logout.php'">
     </main>
     <?php include 'footer.php'; ?>
 </body>
