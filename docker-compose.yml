@@ -1,13 +1,14 @@
 services:
   web:
-    build:
+    build: .
     ports:
       - "8080:80"
     volumes:
       - ./src:/var/www/html
     depends_on:
       db:
-      condition: services_healthy
+        condition: service_healthy
+
   db:
     image: mysql:8.0
     restart: always
@@ -23,6 +24,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     restart: always
@@ -35,5 +37,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
+
 volumes:
   dbdata:
