@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -12,6 +15,7 @@
         <p>hyvä sovellus</p>
         <input type="button" value="Kirjaudu sisään" onclick="window.location.href='login.php'">
         <input type="button" value="Kirjaudu ulos" onclick="window.location.href='logout.php'">
+        <?php include 'feedback.php'; ?>
     </main>
     <?php include 'footer.php'; ?>
 </body>

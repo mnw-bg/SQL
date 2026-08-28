@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     
     if (empty($error)) {
+        session_regenerate_id(true);
         $_SESSION['username'] = $username;
         $_SESSION['opiskelijaryhma'] = $opiskelijaryhma;
         header("Location: index.php");
@@ -48,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p><?php echo htmlspecialchars($msg); ?></p>
             <?php endforeach; ?>
         </div>
-    <?php endif; ?>
+    <?php endif; ?>  
     
     <form action="login.php" method="post">
         <label>Käyttäjänimi:</label>
