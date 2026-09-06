@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS autotietokanta CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE autotietokanta;
+CREATE TABLE IF NOT EXISTS autot (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    merkki VARCHAR(100) NOT NULL,
+    tyyppi VARCHAR(100) NOT NULL,
+    vuosimalli INT NOT NULL
+);

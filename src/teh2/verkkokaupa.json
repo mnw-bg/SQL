@@ -1,0 +1,24 @@
+[
+{"type":"header","version":"5.2.3","comment":"Export to JSON plugin for phpMyAdmin"},
+{"type":"database","name":"verkkokaupa"},
+{"type":"table","name":"Asiakas","database":"verkkokaupa","data":
+[
+
+]
+}
+,{"type":"table","name":"Tilaus","database":"verkkokaupa","data":
+[
+{"TilauusNo":"1","AsiakasID":"1","Tilauspvm":"2024-06-01"}
+]
+}
+,{"type":"table","name":"TilausRivit","database":"verkkokaupa","data":
+[
+
+]
+}
+,{"type":"table","name":"Tuotteet","database":"verkkokaupa","data":
+[
+
+]
+}
+]
