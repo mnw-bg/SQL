@@ -1,6 +1,6 @@
 <?php
 // Määritellään API:n URL-osoite
-$apiUrl = "http://localhost:8080/autodb/autot_api.php";
+$apiUrl = "http://localhost/autot_api/autot_api.php";
 
 // Tarkistetaan, onko GET-parametrina annettu 'id'
 if (isset($_GET['id'])) {

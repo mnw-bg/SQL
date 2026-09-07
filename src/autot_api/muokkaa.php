@@ -1,7 +1,7 @@
 
 <?php
 // Määritellään API:n URL-osoite
-$apiUrl = "http://localhost:8080/autodb/autot_api.php";
+$apiUrl = "http://localhost/autot_api/autot_api.php";
 
 // Alustetaan muuttuja, johon tallennetaan haettu auton data
 $auto = null;

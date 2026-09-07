@@ -1,6 +1,7 @@
 
 <?php
- $apiUrl = "http://localhost:8080/autodb/autot_api.php";
+ob_start(); // Aloitetaan output buffering, jotta voimme käyttää header()-funktiota myöhemmin
+ $apiUrl = "http://localhost/autot_api/autot_api.php";
 // Tarkistetaan, onko lomakkeelta lähetetty 'add'-painike
 if (isset($_POST['add'])) {
     // Kerätään lomakkeen tiedot taulukkoon
@@ -33,6 +34,7 @@ if (isset($_POST['add'])) {
 
     exit;
 }
+ob_end_flush(); // Lopetetaan output buffering ja lähetetään mahdollinen sisältö
 ?>
 
 
