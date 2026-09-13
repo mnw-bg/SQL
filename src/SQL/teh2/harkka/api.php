@@ -2,7 +2,7 @@
 $servername = "db";
 $username = "root"; // Vaihda omaan käyttäjänimeesi
 $password = "root"; // Vaihda omaan salasanaasi
-$dbname = "autot";
+$dbname = "autotietokanta";
 
 // Luo yhteys
 $conn = new mysqli($servername, $username, $password, $dbname);

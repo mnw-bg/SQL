@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS verkkokauppa CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE verkkokauppa;
+CREATE TABLE IF NOT EXISTS Tuote (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nimi VARCHAR(100) NOT NULL,
+    Hinta DECIMAL(10, 2) NOT NULL,
+    Kuvaus TEXT,
+    katekoria VARCHAR(100) NOT NULL
+);

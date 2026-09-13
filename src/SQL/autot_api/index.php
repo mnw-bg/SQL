@@ -16,7 +16,7 @@
 
 <?php
 // API:n osoite, josta autot haetaan
-$apiUrl = "http://localhost:8080/autodb/autot_api.php";
+$apiUrl = "http://localhost/autot_api/autot_api.php";
 
 // Taulukko, johon kerätään kaikki haetut autot (kaikki + yksittäinen)
 $autot = [];

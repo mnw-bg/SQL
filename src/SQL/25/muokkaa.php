@@ -1,7 +1,6 @@
-
 <?php
 // Määritellään API:n URL-osoite
-$apiUrl = "http://localhost:8080/autodb/autot_api.php";
+$apiUrl = "http://localhost/SQL/25/kauppa_api.php";
 
 // Alustetaan muuttuja, johon tallennetaan haettu auton data
 $auto = null;
@@ -18,9 +17,10 @@ if (isset($_POST['update'])) {
     // Kerätään lomakkeen tiedot taulukkoon
     $data = [
         "ID" => intval($_POST['id']),
-        "merkki" => $_POST['merkki'],
-        "tyyppi" => $_POST['tyyppi'],
-        "vuosimalli" => intval($_POST['vuosimalli'])
+        "Nimi" => $_POST['Nimi'],
+        "Hinta" => $_POST['Hinta'],
+        "Kuvaus" => $_POST['Kuvaus'],
+        "katekoria" => $_POST['katekoria']
     ];
 
     // Alustetaan cURL-pyyntö API:lle
@@ -51,8 +51,9 @@ if (isset($_POST['update'])) {
 <h2>Muokkaa autoa</h2>
 <form method="post">
     <input type="hidden" name="id" value="<?= htmlspecialchars($auto['ID']) ?>">
-    <input type="text" name="merkki" value="<?= htmlspecialchars($auto['merkki']) ?>" placeholder="Merkki">
-    <input type="text" name="tyyppi" value="<?= htmlspecialchars($auto['tyyppi']) ?>" placeholder="Tyyppi">
-    <input type="number" name="vuosimalli" value="<?= htmlspecialchars($auto['vuosimalli']) ?>" placeholder="Vuosimalli">
+    <input type="text" name="Nimi" value="<?= htmlspecialchars($auto['Nimi']) ?>" placeholder="Nimi">
+    <input type="text" name="Hinta" value="<?= htmlspecialchars($auto['Hinta']) ?>" placeholder="Hinta">
+    <input type="text" name="Kuvaus" value="<?= htmlspecialchars($auto['Kuvaus']) ?>" placeholder="Kuvaus">
+    <input type="text" name="katekoria" value="<?= htmlspecialchars($auto['katekoria']) ?>" placeholder="Katekoria">
     <button type="submit" name="update">Tallenna muutokset</button>
 </form>
